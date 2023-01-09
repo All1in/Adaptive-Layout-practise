@@ -1,0 +1,205 @@
+.header{
+  background-image: url(../../dist/img/headerbg-little.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-width: 481px) {
+    background-image: url(../../dist/img/headerbg-middle.jpg);
+    background-position: center 0;
+  }
+  @media (min-width: 993px) {
+    background-image: url(../../dist/img/headerbg-large.jpg);
+    background-position: center;
+  }
+}
+.header__top{
+  background-color: #27262A;
+  position: relative;
+  @media (min-width: 993px) {
+    background-color: transparent;
+  }
+  .container {
+    @include display(flex, space-between, center);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media (min-width: 481px) {
+      padding-bottom: 60px;
+    }
+    @media (min-width: 993px) {
+      padding-bottom: 30px;
+    }
+  }
+}
+.logo{
+  @include display;
+  gap: 17px;
+}
+.logo__img{
+  @include display;
+  flex-shrink: 0;
+}
+.logo__text{
+  display: none;
+  @media (min-width: 481px) {
+    @include lato(bold);
+    font-size: 24px;
+    line-height: 16px;
+    color: $violet;
+    text-transform: uppercase;
+    display: block;
+
+    &:hover {
+      color: $fork-color;
+    }
+  }
+}
+.header__list{
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #333333;
+  width: calc(100% - 20px);
+  @media (min-width: 481px) {
+    @include display;
+    background-color: inherit;
+    top: 50%;
+  }
+  @media (min-width: 993px) {
+    position: static;
+    @include display(flex, end, center);
+    margin-right: 40px;
+  }
+}
+.nav__list {
+  @media (min-width: 481px) {
+    @include display(flex, space-between, center);
+  }
+  @media (min-width: 993px) {
+    @include display(flex, space-between, center);
+    width: 530px;
+  }
+}
+.list__item {
+  @include monserat(400);
+  font-size: 26px;
+  line-height: 26px;
+  padding: 25px 0 25px 40px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  list-style: none;
+  border-bottom: 3px solid #3B3B3B;
+  @media (max-width: 481px) {
+    &:hover {
+      color: #8D81AC;
+      border-left: 10px solid #8D81AC;
+      padding-left: 30px;
+    }
+  }
+  @media (min-width: 481px) {
+    &:first-child {
+      padding-left: 0;
+    }
+    @include monserat(bold);
+    color: #8D81AC;
+    border: none;
+    font-size: 14px;
+    line-height: 16px;
+    &:hover {
+      color: $white;
+    }
+  }
+  @media (min-width: 552px) {
+    @include monserat(bold);
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.header__btn{
+  padding: 10px;
+  @media (min-width: 481px) {
+    white-space: nowrap;
+  }
+}
+.burger-btn {
+  border: none;
+  background-color: inherit;
+  @media (min-width: 481px) {
+    display: none;
+  }
+}
+.btn--open,
+.btn--close {
+  @include display;
+}
+.btn--open {
+  gap: 6px;
+  flex-direction: column;
+  & .img:first-child {
+    align-self: end;
+  }
+}
+.btn--close {
+  display: none;
+}
+.header__bottom{
+  margin: 50px 0 415px;
+}
+.header__headline{
+  text-transform: capitalize;
+  @include monserat(bold);
+  line-height: 48px;
+  font-size: 48px;
+  text-align: center;
+}
+.header__subtitle{
+  margin-top: 20px;
+  text-transform: uppercase;
+  @include monserat(normal);
+  font-size: 18pz;
+  line-height: 24px;
+  text-align: center;
+  color: $violet;
+}
+.header__descr{
+  margin-top: 15px;
+  text-align: center;
+  @include monserat(normal);
+  color: #848E97;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  @media (min-width: 481px) {
+    margin-top: 20px;
+    margin-bottom: 470px;
+  }
+  @media (min-width: 993px) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.download {
+  @include display;
+  flex-direction: column;
+  transform: translateY(70%);
+}
+.download__btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  line-height: 20px;
+  @media (min-width: 481px) {
+    padding: 25px 60px;
+    font-size: 21px;
+    line-height: 23px;
+  }
+}
+.download__offer {
+  margin-top: 10px;
+  @include monserat(normal);
+  font-size: 14px;
+  line-height: 14px;
+  color: #848E97;
+  @media (min-width: 481px) {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

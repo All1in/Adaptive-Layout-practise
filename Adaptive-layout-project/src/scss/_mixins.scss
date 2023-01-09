@@ -1,0 +1,25 @@
+//     міксин для шрифту 'Montserrat'(приймає ширину шрифту(наприклад: bold, normal, 400...))
+@mixin monserat ($weight){
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: $weight;
+}
+//     міксин для шрифту 'Lato'
+@mixin lato ($weight){
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: $weight;
+}
+//     міксин для display: flex із центральними значеннями за замовчуванням
+@mixin display ($display: flex, $jc: center, $ai: center) {
+    display: $display;
+    justify-content: $jc;
+    align-items: $ai;
+}
+//     міксин для display: grid із значеннями за замовчуванням: 
+// --- 1 колонка / шириною 1fr / міжколоночний відступ 10рх
+@mixin displayGrid($number: 1, $width: 1fr, $gap: 10px) {
+    display: grid;
+    grid-template-columns: repeat($number, $width);
+    gap: $gap;
+}
